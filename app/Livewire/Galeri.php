@@ -5,11 +5,11 @@ namespace App\Livewire;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-class Beranda extends Component
+class Galeri extends Component
 {
-    #[Title('Beranda')] 
+    #[Title('Galeri')]
     public function render()
     {
-        return view('livewire.beranda');
+        return view('livewire.galeri');
     }
 }

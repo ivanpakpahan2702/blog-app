@@ -28,7 +28,7 @@
   <!-- Nav -->
   <nav class="navbar navbar-expand-lg bg-body-secondary border-bottom">
     <div class="container-fluid">
-      <a class="navbar-brand" href="/">
+      <a class="navbar-brand" href="/" wire:navigate>
         <img src="{{ asset('assets/images/logo/logo.png') }}" alt="Logo" width="45" height="40"
           class="d-inline-block align-text-top"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -38,19 +38,19 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Beranda</a>
+            <a class="nav-link {{ $title == 'Beranda' ? 'active' : '' }}" href="/" wire:navigate>Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
+            <a class="nav-link {{ $title == 'Blog' ? 'active' : '' }}" href="/blog" wire:navigate>Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Galeri</a>
+            <a class="nav-link {{ $title == 'Galeri' ? 'active' : '' }}" href="/galeri" wire:navigate>Galeri</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Alkitab</a>
+            <a class="nav-link {{ $title == 'Alkitab' ? 'active' : '' }}" href="/alkitab" wire:navigate>Alkitab</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Lainnya</a>
+            <a class="nav-link disabled" aria-disabled="true" wire:navigate>Lainnya</a>
           </li>
         </ul>
       </div>

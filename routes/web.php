@@ -1,6 +1,9 @@
 <?php
 
+use App\Livewire\Alkitab;
 use App\Livewire\Beranda;
+use App\Livewire\Blog;
+use App\Livewire\Galeri;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +18,6 @@ use Illuminate\Support\Facades\Route;
  */
 
 Route::get('/', Beranda::class);
+Route::get('/blog', Blog::class);
+Route::get('/galeri', Galeri::class);
+Route::get('/alkitab', Alkitab::class);
